@@ -24,20 +24,17 @@ function SignUpPage() {
     []
   )
 
-  const onSignUpClick = useCallback<MouseEventHandler>(
-    (event) => {
-      setError(null)
+  const onSignUpClick = useCallback<MouseEventHandler>(() => {
+    setError(null)
 
-      signUp({ email, password })
-        .then((data) => {
-          console.log('data', data)
-        })
-        .catch((error: Error) => {
-          setError(error)
-        })
-    },
-    [email, password]
-  )
+    signUp({ email, password })
+      .then((data) => {
+        console.log('data', data)
+      })
+      .catch((error: Error) => {
+        setError(error)
+      })
+  }, [email, password])
 
   return (
     <div>
