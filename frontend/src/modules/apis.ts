@@ -1,4 +1,4 @@
-import apiUrls from '@/modules/apiUrls'
+import { apiUrls } from '@/modules/routes'
 
 export function signUp({
   email,
