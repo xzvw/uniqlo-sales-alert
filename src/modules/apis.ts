@@ -7,7 +7,7 @@ export function signUp({
   email: string
   password: string
 }) {
-  return fetch(apiUrls.createUser, {
+  return fetch(apiUrls.signUp, {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

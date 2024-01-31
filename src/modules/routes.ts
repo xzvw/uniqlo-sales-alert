@@ -1,7 +1,7 @@
 const API_BASE_URL = '/api'
 
 export const apiUrls = {
-  createUser: `${API_BASE_URL}/users`,
+  signUp: `${API_BASE_URL}/sign-up`,
 }
 
 const routes = {
