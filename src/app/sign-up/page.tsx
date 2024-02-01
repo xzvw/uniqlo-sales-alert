@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { MouseEventHandler, useCallback, useState } from 'react'
-import { signUp } from '@/modules/apis'
+import { signUp } from '@/modules/auth/apis'
 import routes from '@/modules/routes'
 import type { ChangeEventHandler } from 'react'
 
