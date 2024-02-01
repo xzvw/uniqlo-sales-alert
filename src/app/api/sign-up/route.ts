@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   })
 
   try {
-    const emailExists = await client.send(
+    const userQuery = await client.send(
       new QueryCommand({
         TableName: TABLE_NAME,
         IndexName: 'email-index',
@@ -44,14 +44,14 @@ export async function POST(request: Request) {
       })
     )
 
-    if (typeof emailExists.Count !== 'number') {
+    if (typeof userQuery.Count !== 'number') {
       return Response.json(
         { message: 'Error registering user.' },
         { status: 500 }
       )
     }
 
-    if (emailExists.Count > 0) {
+    if (userQuery.Count > 0) {
       return Response.json(
         { message: 'Email already exists.' },
         { status: 400 }
